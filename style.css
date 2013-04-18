@@ -4,7 +4,7 @@ Theme URI: http://pure-essence.net/2008/09/19/wordpress-theme-oriental/
 Author: Ying Zhang
 Author URI: http://regretless.com
 Description: Created by <a href="http://pure-essence.net/">pure-essence.net</a>. Oriental, plum, bamboo, pine, flower, foliage, orange, red theme. Now compatible with wordpress 3.5.1 and with responsive design. Supports Jetpack infinite scroll.
-Version: 1.3.8
+Version: 1.3.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: fixed-width, two-columns, threaded-comments, sticky-post, microformats, left-sidebar, yellow, orange, red, custom-menu, editor-style, full-width-template
@@ -798,7 +798,7 @@ body {
 
 #main {
 	width: 1000px;
-	background: url("images/leftFlare.jpg") no-repeat scroll left 10px transparent;
+	background: url("images/leftFlare.png") no-repeat scroll left 10px transparent;
 	padding: 0 53px;
 
 }
