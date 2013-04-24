@@ -7,7 +7,7 @@ version 1.1.2 – Fixed IE 6 issue brought up http://wordpress.org/support/topic/2
 version 1.2.0 – Making the theme compatible with wp 2.7. And sorry I no longer wish to support IE 6. If this theme doesn’t look good in IE 6, use a different one. And seriously everyone need to move off the evil IE 6.
 version 1.2.1 – Made the theme a bit more backward compatible.
 version 1.3.0 – Made compatible with wordpress version 3.5.1. Fixed some bugs viewed under the latest versions of the browers. Added responsive web styling. Added support for wordpress 3 menu.
-version 1.3.9 - Updated screenshot and the sidebar background image
+version 1.3.10 - Updated screenshot and the sidebar background image, fixed site title
 
 --------------------------------------------------------------------------------
 For support:
