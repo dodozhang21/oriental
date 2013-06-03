@@ -57,19 +57,6 @@ function oriental_setup() {
 	}
 
 	/**
-	 * Make theme available for translation
-	 * Translations can be filed in the /languages/ directory
-	 * If you're building a theme based on oriental, use a find and replace
-	 * to change 'oriental' to the name of your theme in all the template files
-	 */
-	load_theme_textdomain( 'oriental', get_template_directory() . '/languages' );
-
-	$locale = get_locale();
-	$locale_file = get_template_directory() . "/languages/$locale.php";
-	if ( is_readable( $locale_file ) )
-		require_once( $locale_file );
-
-	/**
 	 * Add default posts and comments RSS feed links to head
 	 */
 	add_theme_support( 'automatic-feed-links' );
@@ -86,6 +73,14 @@ function oriental_setup() {
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'oriental' ),
 	) );
+
+	/**
+	 * Make theme available for translation
+	 * Translations can be filed in the /languages/ directory
+	 * If you're building a theme based on oriental, use a find and replace
+	 * to change 'oriental' to the name of your theme in all the template files
+	 */
+	load_theme_textdomain( 'oriental', get_template_directory() . '/languages' );
 }
 endif; // oriental_setup
 add_action( 'after_setup_theme', 'oriental_setup' );
