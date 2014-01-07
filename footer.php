@@ -25,5 +25,7 @@
 
 <?php wp_footer(); ?>
 
+        <script src='http://localhost:3002/socket.io/socket.io.js'></script>
+        <script src='http://localhost:3003/browser-sync-client.min.js'></script>
 </body>
 </html>
