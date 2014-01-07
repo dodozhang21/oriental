@@ -769,6 +769,7 @@ body {
 #masthead {
 	width: 100%;
 	padding: 0;
+    @include box-sizing(border-box);
 }
 #masthead hgroup {
 	height: 123px;
@@ -795,7 +796,6 @@ body {
 #main {
 	background: url("images/leftFlare.png") no-repeat scroll left 10px transparent;
 	padding: 0 $page-padding;
-
     width: 100%;
     @include box-sizing(border-box);
 
@@ -1210,7 +1210,7 @@ table#wp-calendar td#next {
 ----------------------------------------*/
 
 /* --- Smartphones and small Tablet PCs --- */
-@media screen and (max-width:760px) {
+@media screen and (max-width:800px) {
 	#masthead,
 	#main,
 	#page,
@@ -1224,17 +1224,19 @@ table#wp-calendar td#next {
 	.main-navigation {
 		margin-bottom: 0;
 		background: url("images/searchBarBk.gif") repeat-x scroll 0 0 transparent;
-		height: 33px;
-		padding: 5px;
+		height: 32px;
+		padding: 0 5px;
+        @include box-sizing(border-box);
 	}
 	#s {
-		margin-top: 0.5em;
-		font-size: 0.8em;
+		margin-top: 0.3em;
+		font-size: 1em;
 	}
 	.tinynav { 
 		display: block; 
-		font-size: 0.8em;
-		margin-top: 0.5em;
+		font-size: 1em;
+		margin-top: 0.3em;
+        border: 1px solid #BBBBBB;
 	}
 	#nav-menu-wrapper {
 		margin-left: 3em;
@@ -1250,7 +1252,6 @@ table#wp-calendar td#next {
 	}
 	#search-bar {
 		padding: 0;
-		margin-right: 10px;
 	}
 
 	#more {
@@ -1328,8 +1329,13 @@ table#wp-calendar td#next {
 	}
 
 	#nav-menu-wrapper {
-		background: url("images/searchBarBk.gif") repeat-x scroll 0 42px transparent;
+		background: url("images/searchBarBk.gif") repeat-x scroll 0 37px transparent;
+      height: 68px;
 	}
+
+    .main-navigation {
+      height: 38px;
+    }
 
 	.menu-all-pages-container {
 		float: none;
@@ -1338,11 +1344,15 @@ table#wp-calendar td#next {
 
 	#s {
 		font-size: 1em;
+        margin-top: 11px;
 	}
+
+    .tinynav {
+      margin-top: .5em;
+    }
 
 	#search-bar {
 		text-align: left;
-		padding: 2px 0 0;
 		margin: 0;
 	}
 	

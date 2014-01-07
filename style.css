@@ -312,7 +312,7 @@ body { background: #fab728 url(images/bk.jpg) left top repeat-x; color: #000; }
 #page { background: url("images/orientalBk.jpg") no-repeat scroll right top transparent; margin: 0 auto; width: 1106px; max-width: 100%; }
 
 /* Header */
-#masthead { width: 100%; padding: 0; }
+#masthead { width: 100%; padding: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 #masthead hgroup { height: 123px; padding-left: 53px; }
 
@@ -481,15 +481,15 @@ table#wp-calendar td#next { text-align: right; }
 /* =Media Queries
 ----------------------------------------*/
 /* --- Smartphones and small Tablet PCs --- */
-@media screen and (max-width: 760px) { #masthead, #main, #page, #primary, .page-template-page-nosidebar-php #primary, #secondary { float: none; width: auto; }
-  .main-navigation { margin-bottom: 0; background: url("images/searchBarBk.gif") repeat-x scroll 0 0 transparent; height: 33px; padding: 5px; }
-  #s { margin-top: 0.5em; font-size: 0.8em; }
-  .tinynav { display: block; font-size: 0.8em; margin-top: 0.5em; }
+@media screen and (max-width: 800px) { #masthead, #main, #page, #primary, .page-template-page-nosidebar-php #primary, #secondary { float: none; width: auto; }
+  .main-navigation { margin-bottom: 0; background: url("images/searchBarBk.gif") repeat-x scroll 0 0 transparent; height: 32px; padding: 0 5px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+  #s { margin-top: 0.3em; font-size: 1em; }
+  .tinynav { display: block; font-size: 1em; margin-top: 0.3em; border: 1px solid #BBBBBB; }
   #nav-menu-wrapper { margin-left: 3em; }
   #nav-menu-wrapper ul { display: none; }
   .main-navigation { min-height: auto; }
   .menu-all-pages-container { float: left; }
-  #search-bar { padding: 0; margin-right: 10px; }
+  #search-bar { padding: 0; }
   #more { display: block; float: left; padding: 0.3em 0.5em; }
   .menu { font-family: Signika, "Helvetica Neue", Helvetica Arial, "Lucida Grande", sans-serif; padding-left: .5em; color: #8E1901; }
   #searchsubmit { display: none; }
@@ -505,8 +505,10 @@ table#wp-calendar td#next { text-align: right; }
   .infinite-scroll.infinity-end #secondary { display: block; } }
 @media screen and (max-width: 480px) { #more { display: block; float: none; padding: 0.3em 0.5em; }
   .menu { color: #FAF6BB; }
-  #nav-menu-wrapper { background: url("images/searchBarBk.gif") repeat-x scroll 0 42px transparent; }
+  #nav-menu-wrapper { background: url("images/searchBarBk.gif") repeat-x scroll 0 37px transparent; height: 68px; }
+  .main-navigation { height: 38px; }
   .menu-all-pages-container { float: none; margin-bottom: 0; }
-  #s { font-size: 1em; }
-  #search-bar { text-align: left; padding: 2px 0 0; margin: 0; }
+  #s { font-size: 1em; margin-top: 11px; }
+  .tinynav { margin-top: .5em; }
+  #search-bar { text-align: left; margin: 0; }
   .main-navigation { background: url("images/headerBarBk.png") repeat scroll 0 0 transparent; margin-bottom: 25px; } }
