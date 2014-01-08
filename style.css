@@ -163,7 +163,6 @@ a:hover, a:focus, a:active { color: #863f09; }
 #nav-menu-wrapper .main-navigation ul.menu > li .sub-menu li .sub-menu:before { right: 10010px; }
 #nav-menu-wrapper .main-navigation ul.menu > li .sub-menu li:hover .sub-menu { top: 0; left: 180px; }
 #nav-menu-wrapper .main-navigation ul.menu > li .sub-menu a { display: block; height: auto; padding: 8px 13px; }
-#nav-menu-wrapper .main-navigation ul.menu > li .sub-menu a:hover { background-color: rgba(143, 38, 1, 0.5); }
 
 /* =Content
 ----------------------------------------------- */
@@ -399,11 +398,11 @@ table#wp-calendar td#next { text-align: right; }
 ----------------------------------------*/
 /* --- Smartphones and small Tablet PCs --- */
 @media screen and (max-width: 800px) { #masthead, #main, #page, #primary, .page-template-page-nosidebar-php #primary, #secondary { float: none; width: auto; }
-  .main-navigation { margin-bottom: 0; background: url("images/searchBarBk.gif") repeat-x scroll 0 0 transparent; height: 32px; padding: 0 5px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+  #nav-menu-wrapper { margin: 0 0 0 3em; }
+  #nav-menu-wrapper .main-navigation { margin-bottom: 0; padding: 0 5px; height: 32px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+  #nav-menu-wrapper .main-navigation ul { display: none; }
   #s { margin-top: 0.3em; font-size: 1em; }
   .tinynav { display: block; font-size: 1em; margin-top: 0.3em; border: 1px solid #BBBBBB; }
-  #nav-menu-wrapper { margin-left: 3em; }
-  #nav-menu-wrapper ul { display: none; }
   .main-navigation { min-height: auto; }
   .menu-all-pages-container { float: left; }
   #search-bar { padding: 0; }
@@ -423,9 +422,8 @@ table#wp-calendar td#next { text-align: right; }
 @media screen and (max-width: 480px) { #more { display: block; float: none; padding: 0.3em 0.5em; }
   .menu { color: #FAF6BB; }
   #nav-menu-wrapper { background: url("images/searchBarBk.gif") repeat-x scroll 0 37px transparent; height: 68px; }
-  .main-navigation { height: 38px; }
+  #nav-menu-wrapper .main-navigation { height: 38px; background: url("images/headerBarBk.png") repeat scroll 0 0 transparent; margin-bottom: 25px; }
   .menu-all-pages-container { float: none; margin-bottom: 0; }
   #s { font-size: 1em; margin-top: 11px; }
   .tinynav { margin-top: .5em; }
-  #search-bar { text-align: left; margin: 0; }
-  .main-navigation { background: url("images/headerBarBk.png") repeat scroll 0 0 transparent; margin-bottom: 25px; } }
+  #search-bar { text-align: left; margin: 0; } }

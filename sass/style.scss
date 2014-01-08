@@ -455,9 +455,6 @@ a {
             display: block;
             height: auto;
             padding: 8px 13px;
-            &:hover {
-              background-color: rgba(#8F2601, .5);
-            }
           }
         }
       }
@@ -1163,13 +1160,19 @@ table#wp-calendar td#next {
     width: auto;
   }
 
-  .main-navigation {
-    margin-bottom: 0;
-    background: url("images/searchBarBk.gif") repeat-x scroll 0 0 transparent;
-    height: 32px;
-    padding: 0 5px;
-    @include box-sizing(border-box);
+  #nav-menu-wrapper {
+    margin: 0 0 0 3em;
+    .main-navigation {
+      margin-bottom: 0;
+      padding: 0 5px;
+      height: 32px;
+      @include box-sizing(border-box);
+      ul {
+        display: none;
+      }
+    }
   }
+
   #s {
     margin-top: 0.3em;
     font-size: 1em;
@@ -1180,12 +1183,7 @@ table#wp-calendar td#next {
     margin-top: 0.3em;
     border: 1px solid #BBBBBB;
   }
-  #nav-menu-wrapper {
-    margin-left: 3em;
-  }
-  #nav-menu-wrapper ul {
-    display: none;
-  }
+
   .main-navigation {
     min-height: auto;
   }
@@ -1273,10 +1271,12 @@ table#wp-calendar td#next {
   #nav-menu-wrapper {
     background: url("images/searchBarBk.gif") repeat-x scroll 0 37px transparent;
     height: 68px;
-  }
 
-  .main-navigation {
-    height: 38px;
+    .main-navigation {
+      height: 38px;
+      background: url("images/headerBarBk.png") repeat scroll 0 0 transparent;
+      margin-bottom: 25px;
+    }
   }
 
   .menu-all-pages-container {
@@ -1296,10 +1296,5 @@ table#wp-calendar td#next {
   #search-bar {
     text-align: left;
     margin: 0;
-  }
-
-  .main-navigation {
-    background: url("images/headerBarBk.png") repeat scroll 0 0 transparent;
-    margin-bottom: 25px;
   }
 }
