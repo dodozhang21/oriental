@@ -9,6 +9,7 @@ version 1.2.1 – Made the theme a bit more backward compatible.
 version 1.3.0 – Made compatible with wordpress version 3.5.1. Fixed some bugs viewed under the latest versions of the browers. Added responsive web styling. Added support for wordpress 3 menu.
 version 1.3.10 - Updated screenshot and the sidebar background image, fixed site title
 version 1.3.11 - Makes the theme translation ready
+version 1.3.12 - Revamp on the main menu and comment styles. Now requires WP 3.8+ as it's dependent on dashicons.
 
 --------------------------------------------------------------------------------
 For support:
@@ -19,6 +20,7 @@ visit http://pure-essence.net/2008/09/19/wordpress-theme-oriental/
 --------------------------------------------------------------------------------
 Notes:
 --------------------------------------------------------------------------------
+Requires WP 3.8+
 Long menu is not supported by the top menu. Please do not put too many items in your top menu or you will run into layout issue with the top menu.
 
 

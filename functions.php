@@ -135,7 +135,7 @@ add_filter('excerpt_more', 'oriental_new_excerpt_more');
  */
 function oriental_scripts() {
 
-	wp_enqueue_style( 'style', get_stylesheet_uri() );
+	wp_enqueue_style( 'style', get_stylesheet_uri(), array( 'dashicons' ) , '1.3.12');
 
 	wp_enqueue_script( 'jquery' );
 
@@ -151,7 +151,6 @@ function oriental_scripts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'oriental_scripts' );
-
 
 
 /**

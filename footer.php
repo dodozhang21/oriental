@@ -17,7 +17,7 @@
 			<?php printf( __( 'Proudly powered by %1$s', 'oriental' ), '<a href="http://wordpress.org/" title="A Semantic Personal Publishing Platform" rel="generator">WordPress</a> | ' ); ?>
 			<?php printf( __( 'Theme %1$s by %2$s', 'oriental' ), 'oriental', '<a href="http://regretless.com/" rel="designer">Ying Zhang</a>' ); ?>
 			<br />
-			<?php printf( __( '%1$s', 'oriental' ), '<a id="top" href="#top">Back to top</a>' ); ?>
+			<?php printf( __( '%1$s', 'oriental' ), '<a id="top" href="#top" title="Back to top">Back to top</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- .site-footer .site-footer -->
 	<div class="footer-bottom"></div>
