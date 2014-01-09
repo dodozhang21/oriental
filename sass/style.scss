@@ -410,11 +410,12 @@ a {
       }
 
       & > li {
-        display: inline-block;
+        display: block;
+        float: left;
         position: relative;
         font-size: 90%;
         background: transparent url("images/headerBarLiBk.gif") no-repeat scroll 0 8px;
-        margin: 0 -3px 0 0;
+        margin: 0;
         padding: 0;
         &:first-child {
           background: none;
@@ -466,6 +467,25 @@ a {
             &:hover .children {
               top: 0;
               left: 180px;
+            }
+
+            &.current_page_item,
+            &.current-menu-item {
+              & > a {
+                background: url("images/headerBarBk.png");
+                color: #FAF6BB;
+                position: relative;
+                &:before {
+                  @include dashicons("\f147");
+                  vertical-align: baseline;
+                  font-size: 15px;
+                  line-height: 15px;
+                  position: absolute;
+                  top: 50%;
+                  margin-top: -6px;
+                  left: 0;
+                }
+              }
             }
           }
           a {
@@ -657,6 +677,7 @@ object {
 /* Search widget */
 
 #search-bar {
+  clear: both;
   padding: 3px 5px 0;
   text-align: right;
   h2 {
@@ -684,6 +705,7 @@ object {
 body {
   background: #fab728 url(images/bk.jpg) left top repeat-x;
   color: #000;
+  overflow-x: hidden;
 }
 
 #page {
@@ -1350,7 +1372,7 @@ table#wp-calendar td#next {
 ----------------------------------------*/
 
 /* --- Smartphones and small Tablet PCs --- */
-@media screen and (max-width:800px) {
+@media screen and (max-width:990px) {
   #masthead,
   #main,
   #page,
@@ -1372,6 +1394,10 @@ table#wp-calendar td#next {
         display: none;
       }
     }
+  }
+
+  #search-bar {
+    clear: none;
   }
 
   #s {
