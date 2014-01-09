@@ -17,7 +17,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 $sans-serif: Arial, Verdana, Helvetica, sans-serif;
 $serif: Garamond, Georgia, serif;
-$fancy-serif: Signika,"Helvetica Neue",Helvetica Arial,"Lucida Grande",sans-serif;
+$fancy-serif: Signika, Garamond, Georgia, serif;
 $fancy-sans-serif: Cabin,"Helvetica Neue",Helvetica Arial,"Lucida Grande",sans-serif;
 
 $page-width: 1106px;
@@ -409,7 +409,7 @@ a {
         line-height: normal;
       }
 
-      &.menu > li {
+      & > li {
         display: inline-block;
         position: relative;
         font-size: 90%;
@@ -431,14 +431,18 @@ a {
           }
         }
 
-        &:hover > .sub-menu {
+        $submenu-size: 180px;
+
+        &:hover > .sub-menu,
+        &:hover > .children {
           left: 0;
         }
-        .sub-menu {
+        .sub-menu,
+        .children {
           position: absolute;
           right: -9999px;
           background-color: rgba(#952E05,.8);
-          width: 180px;
+          width: $submenu-size;
           z-index: 2;
           padding-bottom: .5em;
           overflow: visible;
@@ -452,20 +456,21 @@ a {
           li {
             padding: 0;
             background: none;
-            .sub-menu {
+            .sub-menu,
+            .children {
               &:before {
                 right: 10010px;
               }
             }
-            &:hover .sub-menu {
+            &:hover .sub-menu,
+            &:hover .children {
               top: 0;
               left: 180px;
             }
           }
           a {
-            display: block;
+            width: $submenu-size;
             height: auto;
-            padding: 8px 13px;
           }
         }
       }
@@ -493,8 +498,6 @@ a {
 article.post {
   padding-bottom: 70px;
   background: url("images/divider.gif") repeat-x center bottom transparent;
-}
-.sticky {
 }
 .entry-meta {
   clear: both;
@@ -626,9 +629,9 @@ object {
 #content .site-navigation {
   margin: 0;
   overflow: hidden;
-  padding: 20px;
-  font-family: $serif;
-  font-size: 1.2em;
+  padding: 1em;
+  font-family: $sans-serif;
+  font-size: 1em;
 }
 #content .nav-previous {
   float: left;
@@ -789,15 +792,68 @@ a.post-edit-link {
 
 /* sticky title */
 .sticky .entry-title a,
-.post-password-required .entry-title a {
+.post-password-required .entry-title a,
+.format-gallery .entry-title a,
+.format-video .entry-title a,
+.format-audio .entry-title a,
+.format-status .entry-title a,
+.format-image .entry-title a,
+.format-link .entry-title a,
+.format-quote .entry-title a,
+.format-chat .entry-title a {
   &:before {
     @include dashicons("\f157");
     padding-right: .3em;
   }
 }
+.format-gallery .entry-title a {
+  &:before {
+    content: "\f233";
+  }
+}
+.format-video .entry-title a {
+  &:before {
+    content: "\f235";
+  }
+}
+.format-audio .entry-title a {
+  &:before {
+    content: "\f127";
+  }
+}
+.format-status .entry-title a {
+  &:before {
+    content: "\f110";
+  }
+}
+.format-image .entry-title a {
+  &:before {
+    content: "\f306";
+  }
+}
+.format-link .entry-title a {
+  &:before {
+    content: "\f103";
+  }
+}
+.format-quote .entry-title a {
+  &:before {
+    content: "\f130";
+  }
+}
+.format-chat .entry-title a {
+  &:before {
+    content: "\f125";
+  }
+}
 .post-password-required .entry-title a {
   &:before {
     content: "\f160";
+  }
+}
+.sticky .entry-title a {
+  &:before {
+    content: "\f157";
   }
 }
 h1.page-title {
@@ -955,14 +1011,13 @@ footer {
 /* Comments */
 
 #comments {
-  .single & {
-    background: url("images/commentBottomBk.gif") repeat-x scroll center bottom #DFD797;
-    padding-bottom: 2em;
-  }
+  background: url("images/commentBottomBk.gif") repeat-x center bottom
+    , url("images/commentBk.gif") repeat-x center top;
+  background-color: #DFD797;
+  padding: 2em 0;
 
   .comments-title {
-    background: url("images/commentBk.gif") repeat-x scroll center top #DFD797;
-    padding: 2em 20px 20px;
+    padding: 1em 1em 0 1em;
   }
   .comments-title,
   #reply-title {
@@ -1105,7 +1160,7 @@ footer {
           & > footer {
             position: absolute;
             top: -3.5em;
-            width: 99%;
+            width: 65%;
             text-shadow: 1px 1px 0 $comment-alt-color;
             a {
               color: darken(#A66117, 5%);
