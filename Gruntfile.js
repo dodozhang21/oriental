@@ -46,7 +46,25 @@ module.exports = function(grunt) {
             options: {
                 watchTask: true
             }
-        }
+        },
+		compress: {
+			release: {
+				options: {
+				  archive: 'oriental.zip'
+				},
+				files: [
+				  {src: ['images/**'
+								, 'inc/**'
+								, 'js/**'
+								, 'languages/**'
+								, '*.php'
+								, '*.css'
+								, '*.txt'
+								, '*.png']
+							, dest: '/'} // includes files 
+				]
+			}
+		}
     });
 
 
@@ -56,6 +74,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
+	grunt.loadNpmTasks('grunt-contrib-compress');
 
     // Default task.
     grunt.registerTask('local', ['clean', 'compass', 'browser_sync', 'watch']);
