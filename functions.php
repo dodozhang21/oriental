@@ -220,7 +220,7 @@ add_filter( 'wp_title', 'oriental_filter_wp_title', 10, 2 );
  */
 function oriental_post_image_html( $html, $post_id, $post_image_id ) {
 
-	$html = '<div class="oriental-post-thumbnail" style="background: url(' . wp_get_attachment_url( get_post_thumbnail_id($post_id) ) . ') no-repeat center center;background-size: 200px"><div class="oriental-post-thumbnail-inner">' . $html . '</div></div>';
+	$html = '<div class="oriental-post-thumbnail" style="background: url(' . wp_get_attachment_image_src( get_post_thumbnail_id($post_id) )['0'] . ') no-repeat center center;background-size: 200px"><div class="oriental-post-thumbnail-inner">' . $html . '</div></div>';
 
 	return $html;
 }

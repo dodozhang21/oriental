@@ -378,22 +378,23 @@ a {
 ----------------------------------------------- */
 #nav-menu-wrapper {
   background: url("images/searchBarBk.gif") repeat-x scroll 0 32px transparent;
-  margin: 0 $page-padding;
+  margin: 0 $page-padding 13px;
+	@include box-sizing(border-box);
+	height: 64px;
   .main-navigation {
     background: url("images/headerBarBk.png");
-    clear: both;
     color: #841700;
-    display: inline-block;
+    display: block;
     height: 32px;
-    margin-bottom: 45px;
-    min-height: 30px;
-    padding: 0;
     width: 100%;
-    a {
+		font-size: 90%;
+
+		a {
       color: #FAF6BB;
       text-decoration: none;
-      display: inline-block;
+      display: block;
       padding: 8px 15px;
+      height: 32px;
       @include box-sizing(border-box);
       &:hover {
         background-image: url("images/headerBarBk.png");
@@ -413,7 +414,6 @@ a {
         display: block;
         float: left;
         position: relative;
-        font-size: 90%;
         background: transparent url("images/headerBarLiBk.gif") no-repeat scroll 0 8px;
         margin: 0;
         padding: 0;
@@ -450,7 +450,7 @@ a {
           &:before {
             content: '\00BB';
             position: absolute;
-            top: -25px;
+            top: -24px;
             right: 10005px;
             color: #FAF6BB;
           }
@@ -466,7 +466,7 @@ a {
             &:hover .sub-menu,
             &:hover .children {
               top: 0;
-              left: 180px;
+              left: $submenu-size;
             }
 
             &.current_page_item,
@@ -495,6 +495,7 @@ a {
         }
       }
     }
+    
   }
 }
 
@@ -543,6 +544,7 @@ footer.entry-meta {
 .entry-content,
 .entry-summary {
   margin: 0;
+	word-wrap: break-word;
 }
 .page-links {
   clear: both;
@@ -678,8 +680,10 @@ object {
 
 #search-bar {
   clear: both;
-  padding: 3px 5px 0;
-  text-align: right;
+  @include box-sizing(border-box);
+	height: 32px;
+	padding: 4px;
+	text-align: right;
   h2 {
     display: none;
   }
@@ -694,7 +698,9 @@ object {
 #s {
   border: 1px solid #BBBBBB;
   border-radius: 0;
-  padding: 0;
+  padding: 5px;
+	@include box-sizing(border-box);
+	height: 24px;
 }
 
 /* =Theme Styles
@@ -787,29 +793,31 @@ a.post-edit-link {
   }
 }
 
-.entry-content:before,
-.entry-content:after {
-  content: "";
-  display:table;
-}
-.entry-content:after {
-  clear: both;
-}
+
 .entry-content {
   zoom: 1; /* For IE 6/7 */
+  &:before, &:after {
+		content: "";
+		display:table;
+  }
+  &:after {
+		clear: both;
+  }
 }
 .entry-title,
 .entry-title a {
   font-family: $fancy-serif;
   border-bottom: 0px none;
   float: right;
-  width: auto;
+  width: 100%;
   position: relative;
   margin: 0;
   padding: 0;
   line-height: normal;
   color: #8E1901;
   text-decoration: none;
+	text-align: right;
+	word-wrap: break-word;
 }
 
 /* sticky title */
@@ -1036,7 +1044,7 @@ footer {
   background: url("images/commentBottomBk.gif") repeat-x center bottom
     , url("images/commentBk.gif") repeat-x center top;
   background-color: #DFD797;
-  padding: 2em 0;
+  padding: 39px 0;
 
   .comments-title {
     padding: 1em 1em 0 1em;
@@ -1384,41 +1392,27 @@ table#wp-calendar td#next {
   }
 
   #nav-menu-wrapper {
-    margin: 0 0 0 3em;
     .main-navigation {
-      margin-bottom: 0;
-      padding: 0 5px;
-      height: 32px;
-      @include box-sizing(border-box);
       ul {
         display: none;
       }
     }
   }
 
-  #search-bar {
-    clear: none;
-  }
-
-  #s {
-    margin-top: 0.3em;
-    font-size: 1em;
-  }
+	.menu-short-container {
+		@include box-sizing(border-box);
+		height: 32px;
+		padding: 4px;
+	}
   .tinynav {
     display: block;
     font-size: 1em;
-    margin-top: 0.3em;
     border: 1px solid #BBBBBB;
+		@include box-sizing(border-box);
   }
 
-  .main-navigation {
-    min-height: auto;
-  }
   .menu-all-pages-container {
     float: left;
-  }
-  #search-bar {
-    padding: 0;
   }
 
   #more {
@@ -1430,9 +1424,6 @@ table#wp-calendar td#next {
     font-family: $fancy-serif;
     padding-left: .5em;
     color: #8E1901;
-  }
-  #searchsubmit {
-    display: none;
   }
 
   #page {
@@ -1495,33 +1486,20 @@ table#wp-calendar td#next {
     color: #FAF6BB;
   }
 
-  #nav-menu-wrapper {
-    background: url("images/searchBarBk.gif") repeat-x scroll 0 37px transparent;
-    height: 68px;
-
-    .main-navigation {
-      height: 38px;
-      background: url("images/headerBarBk.png") repeat scroll 0 0 transparent;
-      margin-bottom: 25px;
-    }
-  }
-
   .menu-all-pages-container {
     float: none;
     margin-bottom: 0;
   }
 
-  #s {
-    font-size: 1em;
-    margin-top: 11px;
-  }
-
-  .tinynav {
-    margin-top: .5em;
-  }
-
   #search-bar {
     text-align: left;
-    margin: 0;
   }
+
+	#s, .tinynav {
+		width: 100%;
+	}
+
+	#searchsubmit {
+		display: none;
+	}
 }

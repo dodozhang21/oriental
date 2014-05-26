@@ -78,7 +78,7 @@ module.exports = function(grunt) {
 
     // Default task.
     grunt.registerTask('local', ['clean', 'compass', 'browser_sync', 'watch']);
-    grunt.registerTask('default', ['clean', 'compass',]);
+    grunt.registerTask('default', ['clean', 'compass', 'compress']);
 
 
 };
