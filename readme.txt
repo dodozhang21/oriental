@@ -11,6 +11,7 @@ version 1.3.10 - Updated screenshot and the sidebar background image, fixed site
 version 1.3.11 - Makes the theme translation ready
 version 1.3.13 - Revamp on the main menu and comment styles. Now requires WP 3.8+ as it's dependent on dashicons.
 version 1.3.14 - Fixed a bug in functions.php introduced by v1.3.13
+version 1.3.15 - Updated screenshot to 880x660
 
 --------------------------------------------------------------------------------
 For support:
@@ -28,7 +29,7 @@ Long menu is not supported by the top menu. Please do not put too many items in 
 --------------------------------------------------------------------------------
  Licenses:
 --------------------------------------------------------------------------------
-Oriental WordPress Theme, copyright 2013 Ying Zhang
+Oriental WordPress Theme, copyright 2014 Ying Zhang
 Oriental is distributed under the terms of the GNU GPLv2. See license.txt for further details.
 
 The resources used in oriental theme are all GPL-compatible:
