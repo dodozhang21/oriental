@@ -191,7 +191,6 @@ function oriental_settings_field_support() {
 function oriental_theme_options_render_page() {
 	?>
 	<div class="wrap">
-		<?php screen_icon(); ?>
 		<h2><?php printf( __( '%s Theme Options', 'oriental' ), wp_get_theme() ); ?></h2>
 		<?php settings_errors(); ?>
 
