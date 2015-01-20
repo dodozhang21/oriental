@@ -12,6 +12,7 @@ version 1.3.11 - Makes the theme translation ready
 version 1.3.13 - Revamp on the main menu and comment styles. Now requires WP 3.8+ as it's dependent on dashicons.
 version 1.3.14 - Fixed a bug in functions.php introduced by v1.3.13
 version 1.3.15 - Updated screenshot to 880x660
+version 1.3.17 - Fix various styling issues with child theme reviews: break word in long sub menu item, default style for table, removed timestamp on page, removed screen-icon in theme options
 
 --------------------------------------------------------------------------------
 For support:

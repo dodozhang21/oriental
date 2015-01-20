@@ -98,7 +98,7 @@ msgstr ""
 #: content-page.php:17
 #, php-format
 msgid ""
-"&laquo; <a href=\"%1$s\" title=\"Parent page: %2$s\">%3$s</a> | Posted on "
+"&laquo; <a href=\"%1$s\" title=\"Parent page: %2$s\">%3$s</a>"
 "%4$s"
 msgstr ""
 

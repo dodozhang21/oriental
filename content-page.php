@@ -14,11 +14,10 @@
 		<small class="postmetadata">
 			<?php
 			if($post->post_parent) {
-				printf( __( '&laquo; <a href="%1$s" title="Parent page: %2$s">%3$s</a> | Posted on %4$s', 'oriental' ),
+				printf( __( '&laquo; <a href="%1$s" title="Parent page: %2$s">%3$s</a>', 'oriental' ),
 					esc_url( get_permalink($post->post_parent) ),
 					esc_attr( get_the_title($post->post_parent) ),
-					get_the_title($post->post_parent),
-					esc_attr( get_the_date( ) )
+					get_the_title($post->post_parent)
 				);
 			}
 			?>
