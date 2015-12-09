@@ -21,21 +21,6 @@ get_header(); ?>
 
 					<p><?php get_search_form(); ?></p>
 					
-					<hr />
-						<?php the_widget( 'WP_Widget_Recent_Posts', '', 'before_title=<h2 class="widget-title">&after_title=</h2>' ); ?>
-	
-						<div class="widget">
-							<h2 class="widget-title"><?php _e( 'Categories', 'oriental' ); ?></h2>
-							<ul>
-							<?php wp_list_categories( array( 'orderby' => 'count', 'order' => 'DESC', 'show_count' => 1, 'title_li' => '', 'number' => 15 ) ); ?>
-							</ul>
-						</div>
-	
-						<?php
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', 'before_title=<h2 class="widget-title">&after_title=</h2>' );
-						?>
-	
-						<?php the_widget( 'WP_Widget_Tag_Cloud', '', 'before_title=<h2 class="widget-title">&after_title=</h2>' ); ?>
 
 				</div><!-- .entry-content -->
 			</article><!-- #post-0 -->

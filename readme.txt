@@ -13,6 +13,8 @@ version 1.3.13 - Revamp on the main menu and comment styles. Now requires WP 3.8
 version 1.3.14 - Fixed a bug in functions.php introduced by v1.3.13
 version 1.3.15 - Updated screenshot to 880x660
 version 1.3.17 - Fix various styling issues with child theme reviews: break word in long sub menu item, default style for table, removed timestamp on page, removed screen-icon in theme options
+version 1.3.18 - Updated copyright year
+version 1.3.19 - Removed deprecated function calls in the 404.php
 
 --------------------------------------------------------------------------------
 For support:
@@ -30,7 +32,7 @@ Long menu is not supported by the top menu. Please do not put too many items in 
 --------------------------------------------------------------------------------
  Licenses:
 --------------------------------------------------------------------------------
-Oriental WordPress Theme, copyright 2014 Ying Zhang
+Oriental WordPress Theme, copyright 2015 Ying Zhang
 Oriental is distributed under the terms of the GNU GPLv2. See license.txt for further details.
 
 The resources used in oriental theme are all GPL-compatible:
